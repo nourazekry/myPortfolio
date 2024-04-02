@@ -1,14 +1,36 @@
 import Image from "next/image";
+import styles from '../Experience.module.css';
+import pageStyle from './Projects.module.css';
+export default function Experience() {
+  const experiences = [
+    {
+      company: "Company 1",
+      role: "Role 1",
+      duration: "Duration 1",
+      description: "Description 1",
+    },
+    {
+      company: "Company 2",
+      role: "Role 2",
+      duration: "Duration 2",
+      description: "Description 2",
+    },
+    // Add more experiences as needed
+  ];
 
-export default function Projects() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        </div>
-        </main>
-    );
+    <main className={`${styles.main} ${pageStyle.pageimg}`}>
+      <div className={styles.container}>
+        <h1 className={styles.title}>My Professional Experience</h1>
+        {experiences.map((experience, index) => (
+          <div key={index} className={styles.experience}>
+            <h2 className={styles.company}>{experience.company}</h2>
+            <h3 className={styles.role}>{experience.role}</h3>
+            <p className={styles.duration}>{experience.duration}</p>
+            <p className={styles.description}>{experience.description}</p>
+          </div>
+        ))}
+      </div>
+    </main>
+  );
 }

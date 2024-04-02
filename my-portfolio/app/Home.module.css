@@ -1,5 +1,4 @@
 .page {
-    background-image: url('/learningtowalkAI.png');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -8,6 +7,8 @@
     justify-content: center;
     align-items: center;
     color: white;
+    background-image: url('/learningtowalkAI.png');
+
   }
   
   .toolbar {
