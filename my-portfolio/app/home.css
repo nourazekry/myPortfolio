@@ -1,0 +1,39 @@
+.page {
+    background-image: url('/removedBGAnimation.svg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  
+  .toolbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .toolbarLink {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .content {
+    text-align: center;
+  }
+  
+  .name {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+  
+  .description {
+    font-size: 1.2em;
+  }
