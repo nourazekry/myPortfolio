@@ -7,6 +7,7 @@ export default function Experience() {
     {
       company: "ADknown Inc.",
       role: "Software Developer",
+      duration: "(Jan - Aug 2022) - (May - Oct 2023)",
       description: "Developed internal marketing tools across 3+ systems and pioneered an affiliate marketing site generation system, automating a vital revenue stream. Revitalized digital publishing websites through AWS optimization and Agile methodologies, ensuring efficient workflows using Jira/Confluence and Git.",
     },
     // {
