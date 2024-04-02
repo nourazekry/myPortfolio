@@ -17,23 +17,45 @@
     display: flex;
     justify-content: space-around;
     padding: 10px 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgb(231 223 202 / 67%);
   }
   
   .toolbarLink {
-    color: white;
+    color: #894b24;
     text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5em; 
+  }
+  
+  /* Adjust font size for medium screens */
+  @media screen and (max-width: 768px) {
+    .toolbarLink {
+      font-size: 1.2em;
+    }
+  }
+  
+  /* Adjust font size for small screens */
+  @media screen and (max-width: 480px) {
+    .toolbarLink {
+      font-size: 1em;
+    }
   }
   
   .content {
     text-align: center;
+    font-size: 1.5em;
+    color: #894b24;
   }
   
   .name {
-    font-size: 2em;
+    font-size: 4em;
+    background-color: rgb(231 223 202 / 67%);
+    border-radius: 2em;
     margin-bottom: 0.5em;
   }
   
   .description {
-    font-size: 1.2em;
+    background-color: rgb(231 223 202 / 67%);
+    border-radius: 2em;
+    font-size: 3em;
   }
