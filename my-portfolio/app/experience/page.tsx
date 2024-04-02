@@ -6,7 +6,7 @@ export default function Experience() {
     {
         company: "ADknown Inc.",
         duration: "(Jan - Aug 2022) - (May - Oct 2023)",
-        role: "Software Developer",
+        role: "SOFTWARE DEVELOPER",
         description: "Developed internal marketing tools across 3+ systems and pioneered an affiliate marketing site generation system, automating a vital revenue stream. Revitalized digital publishing websites through AWS optimization and Agile methodologies, ensuring efficient workflows using Jira/Confluence and Git.",
       },
     {
@@ -28,7 +28,7 @@ export default function Experience() {
   return (
     <main className={`${styles.main} ${pageStyle.pageimg}`}>
       <div className={styles.container}>
-        <h1 className={styles.title}>My Professional Experience</h1>
+        <h1 className={styles.title}>Professional Experience</h1>
         {experiences.map((experience, index) => (
           <div key={index} className={styles.experience}>
             <h2 className={styles.company}>{experience.company}</h2>

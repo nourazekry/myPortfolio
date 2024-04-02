@@ -31,7 +31,31 @@
   .selected {
     color: #ff6347; /* Change this to the color you want for the selected link */
   }
+  @keyframes typewriter {
+    0% { width: 0; }
+    100% { width: 100%; }
+  }
   
+  @keyframes show {
+    0% { visibility: hidden; }
+    100% { visibility: visible; }
+  }
+  
+  .typewriterEffect {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+  }
+  
+  .nameEffect {
+    animation: typewriter 2s steps(40, end);
+  }
+  
+  .descriptionEffect {
+    visibility: hidden;
+    animation: typewriter 2s steps(40, end) 3s, show 0s 3s forwards; /* Add 'show' animation */
+  }
   /* Adjust font size for medium screens */
   @media screen and (max-width: 768px) {
     .toolbarLink {

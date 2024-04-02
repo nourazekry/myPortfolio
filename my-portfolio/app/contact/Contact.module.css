@@ -13,7 +13,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
   padding: 2rem;
   border: 5px solid #495251;
   border-radius: 9px;
@@ -28,7 +28,17 @@
 .info a {
   margin-bottom: 0.5rem;
   font-size: 2.5em;
-  font-style: underline;
+  text-decoration: underline;
+}
+
+.linkContainer {
+  display: flex;
+  align-items: center;
+}
+
+.lighterIcon {
+  margin-right: 1rem;
+  filter: invert(1);
 }
 
 /* Adjust box size and font for medium screens */

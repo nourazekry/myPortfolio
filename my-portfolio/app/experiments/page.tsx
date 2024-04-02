@@ -9,19 +9,19 @@ export default function Experience() {
       role: "Software Developer",
       description: "Developed internal marketing tools across 3+ systems and pioneered an affiliate marketing site generation system, automating a vital revenue stream. Revitalized digital publishing websites through AWS optimization and Agile methodologies, ensuring efficient workflows using Jira/Confluence and Git.",
     },
-    {
-      company: "Company 2",
-      role: "Role 2",
-      duration: "Duration 2",
-      description: "Description 2",
-    },
+    // {
+    //   company: "Company 2",
+    //   role: "Role 2",
+    //   duration: "Duration 2",
+    //   description: "Description 2",
+    // },
     // Add more experiences as needed
   ];
 
   return (
     <main className={`${styles.main} ${pageStyle.pageimg}`}>
       <div className={styles.container}>
-        <h1 className={styles.title}>My Professional Experience</h1>
+        <h1 className={styles.title}>Creative Experiments</h1>
         {experiences.map((experience, index) => (
           <div key={index} className={styles.experience}>
             <h2 className={styles.company}>{experience.company}</h2>
