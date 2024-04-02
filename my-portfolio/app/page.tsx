@@ -7,7 +7,6 @@ const Page = () => {
     <div className="page">
       <nav className="toolbar">
         <Link to="/projects" className="toolbar-link">Projects</Link>
-        <Link to="/about" className="toolbar-link">About</Link>
         <Link to="/experiments" className="toolbar-link">Experiments</Link>
       </nav>
       <div className="content">
