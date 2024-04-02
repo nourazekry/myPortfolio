@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from 'next/link';
-import styles from './home.css'; 
+import styles from './Home.module.css'; // Assuming you have a CSS file named Home.module.css
 
 export default function Home() {
   return (
