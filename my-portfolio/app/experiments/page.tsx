@@ -5,10 +5,9 @@ import pageStyle from './Experiments.module.css';
 export default function Experience() {
   const experiences = [
     {
-      company: "Company 1",
-      role: "Role 1",
-      duration: "Duration 1",
-      description: "Description 1",
+      company: "ADknown Inc.",
+      role: "Software Developer",
+      description: "Developed internal marketing tools across 3+ systems and pioneered an affiliate marketing site generation system, automating a vital revenue stream. Revitalized digital publishing websites through AWS optimization and Agile methodologies, ensuring efficient workflows using Jira/Confluence and Git.",
     },
     {
       company: "Company 2",

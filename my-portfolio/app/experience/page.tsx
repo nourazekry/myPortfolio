@@ -4,17 +4,24 @@ import pageStyle from './Image.module.css';
 export default function Experience() {
   const experiences = [
     {
-      company: "Company 1",
-      role: "Role 1",
-      duration: "Duration 1",
-      description: "Description 1",
+        company: "ADknown Inc.",
+        duration: "(Jan - Aug 2022) - (May - Oct 2023)",
+        role: "Software Developer",
+        description: "Developed internal marketing tools across 3+ systems and pioneered an affiliate marketing site generation system, automating a vital revenue stream. Revitalized digital publishing websites through AWS optimization and Agile methodologies, ensuring efficient workflows using Jira/Confluence and Git.",
+      },
+    {
+      company: "University of Guelph",
+      role: "DATA STRUCTURES TEACHING ASSISTANT",
+      duration: "(Sept - Dec 2022)",
+      description: "Guided students through C and data structures fundamentals, resulting in improved understanding and successful assignment resolutions.",
     },
     {
-      company: "Company 2",
-      role: "Role 2",
-      duration: "Duration 2",
-      description: "Description 2",
-    },
+        company: "VisualHawk Solutions",
+        role: "VR GAME DEV/PROJECT MANAGEMENT INTERN",
+        duration: "(May - July 2021)",
+        description: "Formulated Level Design Document, merging arts and software team insights for efficient collaboration.",
+      },
+    
     // Add more experiences as needed
   ];
 

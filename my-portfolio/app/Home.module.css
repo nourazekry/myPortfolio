@@ -27,6 +27,10 @@
     font-weight: bold;
     font-size: 1.5em; 
   }
+
+  .selected {
+    color: #ff6347; /* Change this to the color you want for the selected link */
+  }
   
   /* Adjust font size for medium screens */
   @media screen and (max-width: 768px) {
@@ -45,18 +49,15 @@
   .content {
     text-align: center;
     font-size: 1.5em;
-    color: #894b24;
+    color: #241107;
   }
   
   .name {
     font-size: 4em;
-    background-color: rgb(231 223 202 / 67%);
     border-radius: 2em;
-    margin-bottom: 0.5em;
   }
   
   .description {
-    background-color: rgb(231 223 202 / 67%);
     border-radius: 2em;
-    font-size: 3em;
+    font-size: 1.5em;
   }

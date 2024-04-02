@@ -4,16 +4,16 @@ import pageStyle from './Projects.module.css';
 export default function Experience() {
   const experiences = [
     {
-      company: "Company 1",
-      role: "Role 1",
-      duration: "Duration 1",
-      description: "Description 1",
+      company: "ICC Heart Failure Clinic",
+      role: "FREELANCE FULL-STACK ENGINEER",
+      duration: "2023",
+      description: "Engineered a web application to overhaul a manual patient intake system, reducing time from 25 to 8 minutes.",
     },
     {
-      company: "Company 2",
+      company: "Game of Life Sculpture",
       role: "Role 2",
-      duration: "Duration 2",
-      description: "Description 2",
+      duration: "2023",
+      description: "Programmed addressable RGB LED lights using Arduino Uno and C++, and welded steel structure to create sculpture expressing human-computer synergy",
     },
     // Add more experiences as needed
   ];

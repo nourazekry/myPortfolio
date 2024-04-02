@@ -7,21 +7,50 @@
   padding: 2rem;
   background-color: #894b24;
   background-image: url('/tvs.png');
-
 }
-
-
 
 .info {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 400px;
-  padding: 1rem;
-  border: 1px solid #593219;
-  border-radius: 4px;
+  max-width: 600px;
+  padding: 2rem;
+  border: 5px solid #495251;
+  border-radius: 9px;
+  background-color: #98886c6b;
+  
 }
 
 .info p {
   margin-bottom: 0.5rem;
+  font-size: 2.5em;
+}
+.info a {
+  margin-bottom: 0.5rem;
+  font-size: 2.5em;
+  font-style: underline;
+}
+
+/* Adjust box size and font for medium screens */
+@media screen and (max-width: 768px) {
+  .info {
+    max-width: 80%;
+    padding: 1.5rem;
+  }
+
+  .info p {
+    font-size: 2em;
+  }
+}
+
+/* Adjust box size and font for small screens */
+@media screen and (max-width: 480px) {
+  .info {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .info p {
+    font-size: 1.5em;
+  }
 }
