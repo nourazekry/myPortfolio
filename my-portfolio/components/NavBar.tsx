@@ -37,8 +37,8 @@ export default function NavBar() {
   return (
       <nav className={`${styles.toolbar}`}>
         {menuVisible ? <button onClick={() => setIsSidebarVisible(!isSidebarVisible)} className={styles.hamburger}>☰</button> : ''}        
-        {links.map(link => (
-          <div className= {isSidebarVisible ? '' : styles.sidebar}><Link key={link} href={link} className={`${styles.toolbarLink} ${selectedLink === link ? styles.selected : ''}`} onClick={() => setSelectedLink(link)}>{link.slice(1) || 'About'}</Link>
+        {links.map((link, index) => (
+          <div key={index} className= {isSidebarVisible ? '' : styles.sidebar}><Link key={link} href={link} className={`${styles.toolbarLink} ${selectedLink === link ? styles.selected : ''}`} onClick={() => setSelectedLink(link)}>{link.slice(1) || 'About'}</Link>
         </div>))}
       </nav>
   );
