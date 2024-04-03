@@ -1,87 +1,107 @@
 .page {
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    background-image: url('/learningtowalkAI.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-image: url('/learningtowalkAI.png');
+}
 
-  }
-  
-  .toolbar {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 0;
-    background-color: rgb(231 223 202 / 67%);
-  }
-  
+.toolbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  background-color: rgb(231 223 202 / 86%);
+}
+
+.toolbarLink {
+  color: #894b24;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.hamburger {
+  color: #894b24;
+  font-style: bold;
+  text-align: left;
+}
+.sidebar{
+  display: none;
+}
+.selected {
+  color: white; /* Change this to the color you want for the selected link */
+}
+
+@keyframes typewriter {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
   .toolbarLink {
-    color: #894b24;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.5em; 
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .toolbar {
+    flex-direction: column;
+    padding: 5px 0;
   }
 
-  .selected {
-    color: #ff6347; /* Change this to the color you want for the selected link */
+  .toolbarLink {
+    font-size: 0.8em;
   }
-  @keyframes typewriter {
-    0% { width: 0; }
-    100% { width: 100%; }
-  }
+}
   
-  @keyframes show {
-    0% { visibility: hidden; }
-    100% { visibility: visible; }
-  }
-  
-  .typewriterEffect {
-    overflow: hidden;
-    white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: .15em;
-  }
-  
-  .nameEffect {
-    animation: typewriter 2s steps(40, end);
-  }
-  
-  .descriptionEffect {
-    visibility: hidden;
-    animation: typewriter 2s steps(40, end) 3s, show 0s 3s forwards; /* Add 'show' animation */
-  }
-  /* Adjust font size for medium screens */
-  @media screen and (max-width: 768px) {
-    .toolbarLink {
-      font-size: 1.2em;
-    }
-  }
-  
-  /* Adjust font size for small screens */
-  @media screen and (max-width: 480px) {
-    .toolbarLink {
-      font-size: 1em;
-    }
-  }
-  
+.content {
+  text-align: center;
+  font-size: 1.5em;
+  color: #241107;
+}
+
+.name {
+  font-size: 4em;
+  border-radius: 2em;
+}
+
+.description {
+  border-radius: 2em;
+  font-size: 1.5em;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
   .content {
-    text-align: center;
-    font-size: 1.5em;
-    color: #241107;
+    font-size: 1.2em;
   }
-  
+
   .name {
-    font-size: 4em;
-    border-radius: 2em;
+    font-size: 3em;
   }
-  
+
   .description {
-    border-radius: 2em;
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
+}
+
+@media (max-width: 480px) {
+  .content {
+    font-size: 1em;
+  }
+
+  .name {
+    font-size: 2em;
+  }
+
+  .description {
+    font-size: 1em;
+  }
+}

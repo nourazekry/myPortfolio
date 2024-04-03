@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import styles from './Home.module.css'; 
 import Link from 'next/link';
+import NavBar from "../components/NavBar";
 export const metadata: Metadata = {
   title: "Noura Zekry",
   description: "Noura Zekry's Portfolio",
@@ -14,13 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <nav className={styles.toolbar}>
-        <Link href="/" className={styles.toolbarLink}>About</Link>
-        <Link href="/experience" className={styles.toolbarLink}>Experience</Link>
-        <Link href="/projects" className={styles.toolbarLink}>Projects</Link>
-        <Link href="/experiments" className={styles.toolbarLink}>Experiments</Link>
-        <Link href="/contact" className={styles.toolbarLink}>Contact</Link>
-      </nav>
+      <NavBar />
       <body>{children}</body>
     </html>
   );

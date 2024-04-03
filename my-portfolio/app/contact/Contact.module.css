@@ -1,13 +1,23 @@
-.container {
+.main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  padding: 2rem;
-  background-color: #894b24;
+  padding: 24px;
   background-image: url('/tvs.png');
+  background-size: cover;
 }
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+
+}
+
 
 .info {
   display: flex;
@@ -43,24 +53,32 @@
 
 /* Adjust box size and font for medium screens */
 @media screen and (max-width: 768px) {
-  .info {
+  .info a, .linkContainer a{
     max-width: 80%;
     padding: 1.5rem;
+    font-size: 1.5em;
   }
 
-  .info p {
-    font-size: 2em;
+  .info p, .linkContainer p{
+    font-size: 1em;
+  }
+  .lighterIcon {
+    font-size: 0.5em;
   }
 }
 
 /* Adjust box size and font for small screens */
 @media screen and (max-width: 480px) {
-  .info {
+  .info a, .linkContainer a{
     max-width: 100%;
     padding: 1rem;
+    font-size: 0.8em;
+  }
+  .lighterIcon {
+    font-size: 0.3em;
   }
 
-  .info p {
+  .info p, .linkContainer p{
     font-size: 1.5em;
   }
 }
