@@ -7,7 +7,7 @@ export default function Experience() {
     {
       role: ["ATOMIC CLOCK", "EXPERIMENTS IN NETWORKED PERFORMANCE", "IMAGE PROCESSING APPLICATION"],
       description: [
-        "Working on WWVB radio clock for artist Nestor Kruger's sculpture for Kitchener-Waterloo Art Gallery",
+        "Working on WWVB radio clock for artist Nestor Kruger's sculpture - Kitchener-Waterloo Art Gallery",
         "School for Poetic Computation",
         "Python toolkit + research project addressing 13+ image processing algorithms"
       ],
@@ -23,7 +23,7 @@ export default function Experience() {
             {experience.role.map((role, index) => (
               <div key={index}>
                 <h2 className={`${styles.role} ${pageStyle.role}`}>{role}</h2>
-                <h3 className={styles.description}>{experience.description[index]}</h3>
+                <h3 className={`${styles.description}`}>{experience.description[index]}</h3>
               </div>
             ))}          
           </div>

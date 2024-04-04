@@ -1,9 +1,9 @@
 .pageimg{
     background-image: url('/swirlyWalkingGrid.png');
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center bottom;
-    height: 50vh; /* This will make the div fill the bottom half of the page */
+    background-size: cover; 
+    /* background-position: center bottom;
+    height: 50vh; This will make the div fill the bottom half of the page */
 }
 .role{
     text-decoration: underline;

@@ -7,19 +7,25 @@ export default function Projects() {
       company: "ICC Heart Failure Clinic",
       role: "FREELANCE FULL-STACK ENGINEER",
       duration: "2023",
-      description: "Engineered a web application to overhaul a manual patient intake system, reducing time from 25 to 8 minutes.",
+      description: "Engineered a web application to modernize a manual patient intake system, reducing the completion time from 25 to 8 minutes per patient.",
     },
     {
       company: "Game of Life Sculpture",
       duration: "2023",
-      description: "Programmed addressable RGB LED lights to display Conway's Game of Life Algorithm using Arduino Uno and C++, and welded steel structure to create sculpture expressing human-computer synergy",
+      description: "Programmed addressable RGB LED lights to display Conway's Game of Life Algorithm using Arduino Uno and C++, and welded steel structure to create sculpture expressing human-computer synergy.",
       image: {tag: "/gameOfLife.jpg", alt: "Game of Life Sculpture"},
       link: "https://drive.google.com/drive/u/0/folders/1nVdCUi1N3PCCbfXBsczI1GpUpLD5zULi",
     },
     {
       company: "Learning to Walk (like a computer)",
       duration: "2023",
-      description: "Painting/animation series exploring human-computer synergy through inputting different sequences of paintings into an image processing software in order to generate movement.",
+      description: 
+        (<>
+          Painting/animation series exploring human-computer synergy through inputting different sequences of paintings into an image processing software in order to generate movement.
+          <br />
+          * Juried Art Show 2023 Normal People Collective Award Winner *
+        </>
+        ),
       link: "https://drive.google.com/drive/folders/1RSXtZMnCTSDFOfFq-tr6tE-ub7rD2xUr?usp=sharing",
       image: {tag: "/painting.png", alt: "Learning to Walk (like a computer)"},
     },

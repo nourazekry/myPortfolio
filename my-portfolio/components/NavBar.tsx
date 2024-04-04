@@ -47,10 +47,9 @@ export default function NavBar() {
   return (
       <nav className={`${styles.toolbar} ${isSidebarVisible && menuVisible ? styles.fullscreen : ''}`}>
         {menuVisible ? 
-        <div className={styles.mobileToolbar}>
-          <h1>Noura Zekry</h1>
-          <button onClick={() => setIsSidebarVisible(!isSidebarVisible)} className={styles.hamburger}>☰</button> 
-        </div>
+        <button className={styles.mobileToolbar} onClick={() => setIsSidebarVisible(!isSidebarVisible)}>
+          <h1>☰ Noura Zekry</h1>
+        </button>
         : ''}        
         {links.map((link, index) => (
         <div key={index} className= {isSidebarVisible ? '' : styles.sidebar}>
