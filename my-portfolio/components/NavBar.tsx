@@ -9,7 +9,13 @@ export default function NavBar() {
   const [selectedLink, setSelectedLink] = useState('/');
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false);
-  const [links, setLinks] = useState(['/', '/experience', '/projects', '/experiments', '/contact']);
+  const links = [
+    {name: 'About', url:'/'}, 
+    {name: 'Experience', url:'/experience'}, 
+    {name: 'Projects', url:'/projects'}, 
+    {name: 'Experiments', url:'/experiments'}, 
+    {name: 'Contact', url:'/contact'}
+  ];
 
   useEffect(() => {
     const handleResize = () => {
@@ -48,7 +54,7 @@ export default function NavBar() {
         : ''}        
         {links.map((link, index) => (
         <div key={index} className= {isSidebarVisible ? '' : styles.sidebar}>
-          <Link key={link} href={link} className={`${styles.toolbarLink} ${selectedLink === link ? styles.selected : ''}`} onClick={() => {setSelectedLink(link); if (menuVisible) setIsSidebarVisible(false);}}>{link.slice(1) || 'About'}</Link>
+          <Link key={index} href={link.url} className={`${styles.toolbarLink} ${selectedLink === link.url ? styles.selected : ''}`} onClick={() => {setSelectedLink(link.url); if (menuVisible) setIsSidebarVisible(false);}}>{link.name}</Link>
         </div>))}
       </nav>
   );

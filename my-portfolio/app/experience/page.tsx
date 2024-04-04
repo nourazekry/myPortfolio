@@ -20,7 +20,7 @@ export default function Experience() {
         role: "VR GAME DEV/PROJECT MANAGEMENT INTERN",
         duration: "(May - July 2021)",
         description: "Formulated Level Design Document, merging arts and software team insights for efficient collaboration.",
-      },
+    },
     
     // Add more experiences as needed
   ];

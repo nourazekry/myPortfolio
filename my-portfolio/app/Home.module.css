@@ -73,7 +73,7 @@
 .descriptionEffect {
   visibility: hidden; /* Hide the description initially */
   animation: 
-    typewriter 2s steps(40, end) 2s,  /* Add delay equal to the duration of the title animation */
+    typewriter 2.2s steps(40, end) 2s,  /* Add delay equal to the duration of the title animation */
     blink .75s step-end infinite,
     show 0s linear 2s; /* Change the visibility to visible when the title animation starts */
   animation-fill-mode: forwards; /* Retain the style values from the last keyframe when the animation ends */

@@ -12,13 +12,16 @@ export default function Projects() {
     {
       company: "Game of Life Sculpture",
       duration: "2023",
-      description: "Programmed addressable RGB LED lights using Arduino Uno and C++, and welded steel structure to create sculpture expressing human-computer synergy",
+      description: "Programmed addressable RGB LED lights to display Conway's Game of Life Algorithm using Arduino Uno and C++, and welded steel structure to create sculpture expressing human-computer synergy",
       image: {tag: "/gameOfLife.jpg", alt: "Game of Life Sculpture"},
+      link: "https://drive.google.com/drive/u/0/folders/1nVdCUi1N3PCCbfXBsczI1GpUpLD5zULi",
     },
     {
       company: "Learning to Walk (like a computer)",
       duration: "2023",
-      image: {tag: "/learning.png", alt: "Learning to Walk (like a computer)"},
+      description: "Painting/animation series exploring human-computer synergy through inputting different sequences of paintings into an image processing software in order to generate movement.",
+      link: "https://drive.google.com/drive/folders/1RSXtZMnCTSDFOfFq-tr6tE-ub7rD2xUr?usp=sharing",
+      image: {tag: "/painting.png", alt: "Learning to Walk (like a computer)"},
     },
     // Add more experiences as needed
   ];
@@ -33,7 +36,14 @@ export default function Projects() {
             <h3 className={styles.role}>{experience.role}</h3>
             <p className={styles.duration}>{experience.duration}</p>
             <p className={styles.description}>{experience.description}</p>
+
             {experience.image ? <Image className={styles.image} src={experience.image.tag} alt={experience.image.alt} width={500} height={500} /> : ''}
+            {experience.link ? 
+            <div className={styles.link}>
+              {/* <span class="material-symbols-outlined">local_library</span> */}
+              <a href={experience.link}>More Info</a> 
+            </div>
+            : ''}
           </div>
         ))}
       </div>
