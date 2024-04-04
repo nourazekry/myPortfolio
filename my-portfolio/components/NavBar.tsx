@@ -13,9 +13,8 @@ export default function NavBar() {
 
   useEffect(() => {
     const handleResize = () => {
-      console.log('window.innerWidth', window.innerWidth);
-
-      if (window.innerWidth < 550) {
+      console.log('resize, window.innerWidth:', window.innerWidth)
+      if (window.innerWidth < 450) {
         setMenuVisible(true);
         setIsSidebarVisible(false); // Hide the sidebar when the window is small
       } else {
@@ -25,6 +24,7 @@ export default function NavBar() {
     };
 
     window.addEventListener('resize', handleResize);
+
     // Call the handleResize function to set the initial state
     handleResize();
 
@@ -34,11 +34,21 @@ export default function NavBar() {
     };
   }, []);
 
+  useEffect(() => {
+    console.log('isSidebarVisible:', isSidebarVisible, 'menuVisible:', menuVisible)
+  }, [isSidebarVisible, menuVisible]);
+
   return (
-      <nav className={`${styles.toolbar}`}>
-        {menuVisible ? <button onClick={() => setIsSidebarVisible(!isSidebarVisible)} className={styles.hamburger}>☰</button> : ''}        
+      <nav className={`${styles.toolbar} ${isSidebarVisible && menuVisible ? styles.fullscreen : ''}`}>
+        {menuVisible ? 
+        <div className={styles.mobileToolbar}>
+          <h1>Noura Zekry</h1>
+          <button onClick={() => setIsSidebarVisible(!isSidebarVisible)} className={styles.hamburger}>☰</button> 
+        </div>
+        : ''}        
         {links.map((link, index) => (
-          <div key={index} className= {isSidebarVisible ? '' : styles.sidebar}><Link key={link} href={link} className={`${styles.toolbarLink} ${selectedLink === link ? styles.selected : ''}`} onClick={() => setSelectedLink(link)}>{link.slice(1) || 'About'}</Link>
+        <div key={index} className= {isSidebarVisible ? '' : styles.sidebar}>
+          <Link key={link} href={link} className={`${styles.toolbarLink} ${selectedLink === link ? styles.selected : ''}`} onClick={() => {setSelectedLink(link); if (menuVisible) setIsSidebarVisible(false);}}>{link.slice(1) || 'About'}</Link>
         </div>))}
       </nav>
   );

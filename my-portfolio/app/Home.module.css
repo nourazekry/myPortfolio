@@ -9,6 +9,14 @@
   color: white;
   background-image: url('/learningtowalkAI.png');
 }
+.mobileToolbar{
+  color: #894b24;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;
+  font-weight: bold;
+}
 
 .toolbar {
   position: absolute;
@@ -27,9 +35,8 @@
   font-size: 1.5em;
 }
 .hamburger {
-  color: #894b24;
   font-style: bold;
-  text-align: left;
+  padding-left: 10px;
 }
 .sidebar{
   display: none;
@@ -39,10 +46,43 @@
 }
 
 @keyframes typewriter {
-  0% { width: 0; }
-  100% { width: 100%; }
+  from { width: 0; }
+  to { width: 100%; }
 }
 
+@keyframes blink {
+  from, to { border-color: transparent }
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: 
+    typewriter 2s steps(40, end),
+    blink .75s step-end infinite;
+}
+
+.nameEffect {
+  animation: 
+    typewriter 2s steps(40, end),
+    blink .75s step-end infinite;
+}
+
+.descriptionEffect {
+  visibility: hidden; /* Hide the description initially */
+  animation: 
+    typewriter 2s steps(40, end) 2s,  /* Add delay equal to the duration of the title animation */
+    blink .75s step-end infinite,
+    show 0s linear 2s; /* Change the visibility to visible when the title animation starts */
+  animation-fill-mode: forwards; /* Retain the style values from the last keyframe when the animation ends */
+}
+
+@keyframes show {
+  0% { visibility: hidden; }
+  100% { visibility: visible; }
+}
 /* Responsive styles */
 @media (max-width: 768px) {
   .toolbarLink {
@@ -57,7 +97,7 @@
   }
 
   .toolbarLink {
-    font-size: 0.8em;
+    font-size: 2.8em;
   }
 }
   
@@ -65,16 +105,29 @@
   text-align: center;
   font-size: 1.5em;
   color: #241107;
+  text-shadow: -9px 5px #886c2b;
 }
 
 .name {
-  font-size: 4em;
+  font-size: 3.5em;
   border-radius: 2em;
+  font-weight: bold;
 }
 
 .description {
   border-radius: 2em;
-  font-size: 1.5em;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  text-align: center;
 }
 
 /* Responsive styles */
@@ -84,11 +137,14 @@
   }
 
   .name {
-    font-size: 3em;
+    font-size: 3.5em;
   }
 
   .description {
-    font-size: 1.2em;
+    font-size: 1.7em;
+  }
+  .typewriter {
+    white-space: normal;
   }
 }
 
@@ -97,11 +153,4 @@
     font-size: 1em;
   }
 
-  .name {
-    font-size: 2em;
-  }
-
-  .description {
-    font-size: 1em;
-  }
 }
